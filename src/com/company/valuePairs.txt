@@ -1,104 +1,104 @@
-Author_id ,The ID of the account creating the alert
+Author_id ,The ID of the author creating the alert
 Composite_risk,Total of all risk scores summed
-Date_created,Date the alert was created (Default: Years)
-Date_published,Date the alert was published (Default: Years)
-Date_updated,Date the alert was updated (Default: Years)
+Date_created,Date the alert was created
+Date_published,Date the alert was published
+Date_updated,Date the alert was updated
 Highlights,unclear
-Id,The ID of the account on creation (Default: Sum)
-Period_quarter,The quarter of the year (Default: All Items)
-Period_year,The year (Default: All Items)
-Published_by_id,Displays the ID that published the alert if given one (Default: Sum)
-Rank,The order in which each alert is placed (Default: Sum)
+Id,The ID of the account on creation
+Period_quarter,The quarter of the year
+Period_year,The year
+Published_by_id,Displays the ID that published the alert if given one
+Rank,The order in which each alert is placed
 Report_type_id,Number assigned to the type of data being reported based on where it originated
 Report_type_name,Where the report originated from
 Security_target_id,unclear
 Status,unclear
-Target_id,ID given to each target as it is logged
-Value_date,Whichever time period a value appears in (Default: Years)
+Target_id,ID given to each target as it is logged (accounts)
+Value_date,Whichever time period a value appears in
 Domain_name,The sector that each report and/or alert is filed into
-Id,The ID of the domain on creation (Default: Sum)
+Id,The ID of the domain on creation
 Target_type_id,ID assigned to a target (location/company) on a 1-5 scale
-Alert_id,The ID of the alert on creation (Default: Sum)
-Id,The ID of the alert on creation (Default: Sum)
+Alert_id,The ID of the alert on creation
+Id,The ID of the alert on creation
 Parameter_id,unclear
-Alert_id,The ID of the alert on creation (Default: Sum)
-Id,The ID of the alert on creation (Default: Sum)
-Target_id,
-Target_type_id,
-Additional_info,
-Alert_date,
-Alert_url,
-Author_id,
-Content,
-Date_created,
-Date_published,
-Date_updated,
-Event_name,
-Id,
-Image,
-IsConsolidated,
-IsPartOfConsolidated,
-Pdf_file,
-Period_quarter,
-Period_year,
-Perspective,
-Published_by_id,
-Quality,
-Reviewer_id,
-Severity,
-Source,
-Source_title,
-Status,
-Takeaways,
-Title,
-TurnOver,
-TurnOverList,
-Type_of_event_id,
-Author_id,
-Client_comment,
-Comment,
-Date_created,
-Date_published,
-Date_updated,
-Id,
-Key_takeaways,
-Param_name,
-Param_target_type,
-Parameter_id,
-Parent_id,
-Period_quarter,
-Period-year,
-Published_by_id,
-Rank_gsrm_param,
-Rating,
-Security_param_taret_id,
-Security_param_target_id,
-Source,
-Status,
-Target_id,
-Value,
-Value_date,
-Weight,
-Date_created,
-Date_updated,
-Email,
-Expired_flag_new,
-Expires_on,
-Id,
-IsSubsidiarySubscription,
-Org_id,
-Organization_id,
-Parent_id,
-Pricing_plan_id,
-Report_type,
-Report_type_one_id,
-Start_date,
-Target_id,
-Uid,
-WeightOfSubsidiaryTarget,
-Name,
-Target_id,
-Target_id_security,
-Target_type_id,
-Target_type_name,
-Target_url,
+Alert_id,The ID of the alert on creation
+Id,The ID of the alert on creation
+Target_id,ID given to each GSRM alert as it is logged
+Target_type_id,ID assigned to a GSRM alert on a 1-5 scale
+Additional_info,Extra info added to the GSRM alert
+Alert_date,The date that the alert event occurred
+Alert_url,The internal SW url that contains the alert info
+Author_id,The ID of the author creating the alert
+Content,The text body of the alert
+Date_created,The date that the alert event is created
+Date_published,The date that the alert event is published
+Date_updated,The date that the alert event is updated
+Event_name,Topic/descriptor assigned to the alert
+Id,The ID of the alert on creation
+Image,File names for any accompanying images that are embedded with the alerts
+IsConsolidated,An designation of 0/1 if the alert has been resolved
+IsPartOfConsolidated,An designation of 0/1 if the alert has been resolved and included in the database of similarly resolved events
+Pdf_file,File names for any accompanying PDFs that are embedded with the alerts
+Period_quarter,The quarter of the year in which the alerts occurs
+Period_year,The year in which the event that the alert refers to occur(s/red)
+Perspective,Additional information about the context of the alert that aids understanding of the circumstances
+Published_by_id,Displays the ID that published the alert if given one
+Quality,unclear
+Reviewer_id,Displays the ID that reviewed the alert if given one
+Severity,The designation given to the alert for the severity of the event
+Source,The external url that published the event info
+Source_title,The title of the event given by the source
+Status,unclear
+Takeaways,Conclusions drawn from the alert for quick review by the reader
+Title,Title of the article the alert is generated from
+TurnOver,unclear
+TurnOverList,unclear
+Type_of_event_id,An ID given to each event
+Author_id,The ID of the author creating the alert
+Client_comment,A comment added to the alert by the client
+Comment,A comment added to the alert by the developer
+Date_created,The date that the alert event is created
+Date_published,The date that the alert event is published
+Date_updated,The date that the alert event is updated
+Id,The ID of the parameter given to the alert
+Key_takeaways,Conclusions drawn from the alert for quick review by the reader
+Param_name,The parameter assigned to the alert/event
+Param_target_type,A numerical designation given to the parameter (1-4)
+Parameter_id,A unique numerical designation given to each parameter
+Parent_id,unclear
+Period_quarter,The quarter of the year
+Period-year,The year
+Published_by_id,Displays the ID that published the alert if given one
+Rank_gsrm_param,A rank of every possible parameter an event is contained in
+Rating,A rating of potential risk (?) for each event in a given parameter
+Security_param_taret_id,deprecated
+Security_param_target_id,The ID given to each parameter indicating severity of the topic
+Source,The external url that published the event info
+Status,unclear
+Target_id,ID given to each target as it is logged (parameter)
+Value,unclear
+Value_date,The date the value appears
+Weight,unclear
+Date_created,The date that the alert event is created
+Date_updated,unclear
+Email,unclear
+Expired_flag_new,unclear
+Expires_on,unclear
+Id,unclear
+IsSubsidiarySubscription,unclear
+Org_id,unclear
+Organization_id,unclear
+Parent_id,unclear
+Pricing_plan_id,unclear
+Report_type,unclear
+Report_type_one_id,unclear
+Start_date,unclear
+Target_id,unclear
+Uid,unclear
+WeightOfSubsidiaryTarget,unclear
+Name,unclear
+Target_id,unclear
+Target_id_security,unclear
+Target_type_id,unclear
+Target_type_name,unclear
+Target_url,unclear
