@@ -1,104 +1,104 @@
-Author_id
-Composite_risk
-Date_created
-Date_published
-Date_updated
-Highlights
-Id
-Period_quarter
-Period_year
-Published_by_id
-Rank
-Report_type_id
-Report_type_name
-Security_target_id
-Status
-Target_id
-Value_date
-Domain_name
-Id
-Target_type_id
-Alert_id
-Id
-Parameter_id
-Alert_id
-Id
-Target_id
-Target_type_id
-Additional_info
-Alert_date
-Alert_url
-Author_id
-Content
-Date_created
-Date_published
-Date_updated
-Event_name
-Id
-Image
-IsConsolidated
-IsPartOfConsolidated
-Pdf_file
-Period_quarter
-Period_year
-Perspective
-Published_by_id
-Quality
-Reviewer_id
-Severity
-Source
-Source_title
-Status
-Takeaways
-Title
-TurnOver
-TurnOverList
-Type_of_event_id
-Author_id
-Client_comment
-Comment
-Date_created
-Date_published
-Date_updated
-Id
-Key_takeaways
-Param_name
-Param_target_type
-Parameter_id
-Parent_id
-Period_quarter
-Period-year
-Published_by_id
-Rank_gsrm_param
-Rating
-Security_param_taret_id
-Security_param_target_id
-Source
-Status
-Target_id
-Value
-Value_date
-Weight
-Date_created
-Date_updated
-Email
-Expired_flag_new
-Expires_on
-Id
-IsSubsidiarySubscription
-Org_id
-Organization_id
-Parent_id
-Pricing_plan_id
-Report_type
-Report_type_one_id
-Start_date
-Target_id
-Uid
-WeightOfSubsidiaryTarget
-Name
-Target_id
-Target_id_security
-Target_type_id
-Target_type_name
-Target_url
+Author_id ,The ID of the account creating the alert
+Composite_risk,Total of all risk scores summed
+Date_created,Date the alert was created (Default: Years)
+Date_published,Date the alert was published (Default: Years)
+Date_updated,Date the alert was updated (Default: Years)
+Highlights,unclear
+Id,The ID of the account on creation (Default: Sum)
+Period_quarter,The quarter of the year (Default: All Items)
+Period_year,The year (Default: All Items)
+Published_by_id,Displays the ID that published the alert if given one (Default: Sum)
+Rank,The order in which each alert is placed (Default: Sum)
+Report_type_id,Number assigned to the type of data being reported based on where it originated
+Report_type_name,Where the report originated from
+Security_target_id,unclear
+Status,unclear
+Target_id,ID given to each target as it is logged
+Value_date,Whichever time period a value appears in (Default: Years)
+Domain_name,The sector that each report and/or alert is filed into
+Id,The ID of the domain on creation (Default: Sum)
+Target_type_id,ID assigned to a target (location/company) on a 1-5 scale
+Alert_id,The ID of the alert on creation (Default: Sum)
+Id,The ID of the alert on creation (Default: Sum)
+Parameter_id,unclear
+Alert_id,The ID of the alert on creation (Default: Sum)
+Id,The ID of the alert on creation (Default: Sum)
+Target_id,
+Target_type_id,
+Additional_info,
+Alert_date,
+Alert_url,
+Author_id,
+Content,
+Date_created,
+Date_published,
+Date_updated,
+Event_name,
+Id,
+Image,
+IsConsolidated,
+IsPartOfConsolidated,
+Pdf_file,
+Period_quarter,
+Period_year,
+Perspective,
+Published_by_id,
+Quality,
+Reviewer_id,
+Severity,
+Source,
+Source_title,
+Status,
+Takeaways,
+Title,
+TurnOver,
+TurnOverList,
+Type_of_event_id,
+Author_id,
+Client_comment,
+Comment,
+Date_created,
+Date_published,
+Date_updated,
+Id,
+Key_takeaways,
+Param_name,
+Param_target_type,
+Parameter_id,
+Parent_id,
+Period_quarter,
+Period-year,
+Published_by_id,
+Rank_gsrm_param,
+Rating,
+Security_param_taret_id,
+Security_param_target_id,
+Source,
+Status,
+Target_id,
+Value,
+Value_date,
+Weight,
+Date_created,
+Date_updated,
+Email,
+Expired_flag_new,
+Expires_on,
+Id,
+IsSubsidiarySubscription,
+Org_id,
+Organization_id,
+Parent_id,
+Pricing_plan_id,
+Report_type,
+Report_type_one_id,
+Start_date,
+Target_id,
+Uid,
+WeightOfSubsidiaryTarget,
+Name,
+Target_id,
+Target_id_security,
+Target_type_id,
+Target_type_name,
+Target_url,
