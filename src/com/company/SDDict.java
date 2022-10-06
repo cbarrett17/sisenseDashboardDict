@@ -1,24 +1,26 @@
 package com.company;
 
-import java.util.HashMap;
-import java.util.Scanner;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.Options;
 
 
 public class SDDict {
 
-    public static HashMap<String, String> descLookup;
-
+    // main method of the program
     public static void main(String[] args) {
-        // main method
-        // nerve center of the program
-    }
 
-    private static HashMap<String, String> descLookup() {
-        // creates the appropriate hashMap for use
-        // calls selectFile
-    }
+        // create options
 
-    private static Scanner selectFile() {
-        // selects which table to populate the hashMap from
+        // read options
+
+            // select correct file
+
+            // populate hashMap
+
+            // read value name
+
+        // print out value definition(s)
     }
 }
