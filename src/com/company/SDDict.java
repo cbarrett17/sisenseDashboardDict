@@ -15,8 +15,9 @@ import java.util.Scanner;
 public class SDDict {
     private static final int HELP_OPTION = 0;
     private static final int INVALID_INPUT = 1;
+    private static final int FILE_NOT_FOUND = 2;
 
-    private static final String ALL_VALUES = "valuePairs.txt";
+    private static final String ALL_VALUES = "valuePairs";
 
     // main method of the program
     public static void main(String[] args) {
@@ -124,6 +125,8 @@ public class SDDict {
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.err.println("\nERROR: FILE NOT FOUND\nSYSTEM EXIT 2\n");
+            System.exit(FILE_NOT_FOUND);
         }
         return dict;
     }
