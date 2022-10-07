@@ -1,3 +1,4 @@
+Value,Definition
 Author_id ,The ID of the author creating the alert
 Composite_risk,Total of all risk scores summed
 Date_created,Date the alert was created

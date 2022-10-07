@@ -7,24 +7,32 @@ import org.apache.commons.cli.Options;
 
 import java.io.*;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
 
 public class SDDict {
+    private static final int HELP_OPTION = 0;
     private static final int INVALID_INPUT = 1;
 
-    private static final String ALL_VALUES = "valuePairs";
+    private static final String ALL_VALUES = "valuePairs.txt";
 
     // main method of the program
     public static void main(String[] args) {
         // create new options
-        ResourceBundle strings = ResourceBundle.getBundle("SDDict");
+        Locale locale;
+        ResourceBundle strings;
         Options options;
         String fileName;
         String userInput = "";
         String definition;
         HashMap<String, String> dictionary;
+
+        // determine the locale
+        locale = Locale.getDefault();
+        // load localized string resources
+        strings = ResourceBundle.getBundle("SDDict", locale);
 
         // create options
         options = createOptions(strings);
@@ -80,14 +88,17 @@ public class SDDict {
                 System.out.printf(helpMsg + "\n-a, --all:  %s",
                     options.getOption("a").getDescription()
                 );
-            }
-            // Any program run that doesn't include a help command must contain a file name
-            if (cmd.hasOption("a")) {
-                fileName = ALL_VALUES;
+                System.exit(HELP_OPTION);
             }
             else {
-                System.err.println("\nERROR: INVALID COMMAND GIVEN\nSYSTEM EXIT 1\n");
-                System.exit(INVALID_INPUT);
+                // Any program run that doesn't include a help command must contain a file name
+                if (cmd.hasOption("a")) {
+                    fileName = ALL_VALUES;
+                }
+                else {
+                    System.err.println("\nERROR: INVALID COMMAND GIVEN\nSYSTEM EXIT 1\n");
+                    System.exit(INVALID_INPUT);
+                }
             }
         }
         catch (org.apache.commons.cli.ParseException p) {
@@ -128,7 +139,6 @@ public class SDDict {
 
         try {
             line = br.readLine();
-
             while (line != null) {
                 pairs = line.split(",");
                 key = pairs[0];
