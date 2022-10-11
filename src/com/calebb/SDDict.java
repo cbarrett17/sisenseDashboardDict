@@ -1,3 +1,5 @@
+package com.calebb;
+
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
@@ -15,7 +17,7 @@ public class SDDict {
     private static final int INVALID_INPUT = 1;
     private static final int FILE_NOT_FOUND = 2;
 
-    private static final String ALL_VALUES = "valuePairs.csv";
+    private static final String ALL_VALUES = "valuePairs";
 
     // main method of the program
     public static void main(String[] args) {
@@ -109,18 +111,17 @@ public class SDDict {
     }
 
     private static HashMap<String, String> readAndPopulate(String fileName) {
-        File file;
+        String csvFile;
         HashMap<String, String> dict;
 
-        file = new File(fileName);
+        csvFile = fileName + ".csv";
         dict = new HashMap<>();
 
         try {
             BufferedReader br;
 
-            br = new BufferedReader(new FileReader(file));
+            br = new BufferedReader(new FileReader(csvFile));
             dict = populateDict(br);
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.err.println("\nERROR: FILE NOT FOUND\nSYSTEM EXIT 2\n");
