@@ -6,6 +6,7 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 
 import java.io.*;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -26,6 +27,7 @@ public class SDDict {
         ResourceBundle strings;
         Options options;
         String fileName;
+        File filoPilo;
         String userInput = "";
         String definition;
         HashMap<String, String> dictionary;
@@ -94,7 +96,7 @@ public class SDDict {
             else {
                 // Any program run that doesn't include a help command must contain a file name
                 if (cmd.hasOption("a")) {
-                    fileName = ALL_VALUES;
+                    fileName = ALL_VALUES + ".csv";
                 }
                 else {
                     System.err.println("\nERROR: INVALID COMMAND GIVEN\nSYSTEM EXIT 1\n");
@@ -110,17 +112,16 @@ public class SDDict {
         return fileName;
     }
 
-    private static HashMap<String, String> readAndPopulate(String fileName) {
-        String csvFile;
+    private static HashMap<String, String> readAndPopulate(String filoPilo) {
         HashMap<String, String> dict;
+        Path path;
 
-        csvFile = fileName + ".csv";
         dict = new HashMap<>();
 
         try {
             BufferedReader br;
 
-            br = new BufferedReader(new FileReader(csvFile));
+            br = new BufferedReader(new FileReader(filoPilo));
             dict = populateDict(br);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
