@@ -60,11 +60,27 @@ public class SDDict {
 
         String helpOpt = strings.getString("helpOpt");
         String allOpt = strings.getString("allOpt");
+        String accOpt = strings.getString("accOpt");
+        String catOpt = strings.getString("catOpt");
+        String domOpt = strings.getString("domOpt");
+        String ataOpt = strings.getString("ataOpt");
+        String aleOpt = strings.getString("aleOpt");
+        String parOpt = strings.getString("parOpt");
+        String secOpt = strings.getString("secOpt");
+        String tarOpt = strings.getString("tarOpt");
 
         options = new Options();
 
         options.addOption("h", "help", false, helpOpt);
         options.addOption("a", "all", false, allOpt);
+        options.addOption("b", "accounts", false, accOpt);
+        options.addOption("c", "categories", false, catOpt);
+        options.addOption("d", "domain", false, domOpt);
+        options.addOption("e", "atargets", false, ataOpt);
+        options.addOption("f", "alert", false, aleOpt);
+        options.addOption("g", "param", false, parOpt);
+        options.addOption("i", "security", false, secOpt);
+        options.addOption("j", "targets", false, tarOpt);
 
         return options;
     }
@@ -86,8 +102,21 @@ public class SDDict {
 
             // Check if help option is present or not
             if (cmd.hasOption("h")) {
-                System.out.printf(helpMsg + "\n-a, --all:  %s",
-                    options.getOption("a").getDescription()
+                System.out.printf(
+                    helpMsg + "\n-a, --all:  %s\n-b, --accounts:  %s" +
+                        "\n-c, --categories:  %s\n-d, --domain:  %s" +
+                        "\n-e, --atargets:  %s\n-f, --alert:  %s" +
+                        "\n-g, --param:  %s\n-i, --security:  %s" +
+                        "\n-j, --targets:  %s",
+                    options.getOption("a").getDescription(),
+                    options.getOption("b").getDescription(),
+                    options.getOption("c").getDescription(),
+                    options.getOption("d").getDescription(),
+                    options.getOption("e").getDescription(),
+                    options.getOption("f").getDescription(),
+                    options.getOption("g").getDescription(),
+                    options.getOption("i").getDescription(),
+                    options.getOption("j").getDescription()
                 );
                 System.exit(HELP_OPTION);
             }
