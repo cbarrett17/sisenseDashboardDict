@@ -1,0 +1,5 @@
+Value,Definition
+Alert_id,The ID of the alert on creation
+Id,The ID of the alert on creation
+Target_id,ID given to each GSRM alert as it is logged
+Target_type_id,ID assigned to a GSRM alert on a 1-5 scale

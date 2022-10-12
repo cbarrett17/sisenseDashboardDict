@@ -1,0 +1,26 @@
+Value,Definition
+Author_id,The ID of the author creating the alert
+Client_comment,A comment added to the alert by the client
+Comment,A comment added to the alert by the developer
+Date_created,The date that the alert event is created
+Date_published,The date that the alert event is published
+Date_updated,The date that the alert event is updated
+Id,The ID of the parameter given to the alert
+Key_takeaways,Conclusions drawn from the alert for quick review by the reader
+Param_name,The parameter assigned to the alert/event
+Param_target_type,A numerical designation given to the parameter (1-4)
+Parameter_id,A unique numerical designation given to each parameter
+Parent_id,unclear
+Period_quarter,The quarter of the year
+Period-year,The year
+Published_by_id,Displays the ID that published the alert if given one
+Rank_gsrm_param,A rank of every possible parameter an event is contained in
+Rating,A rating of potential risk (?) for each event in a given parameter
+Security_param_taret_id,deprecated
+Security_param_target_id,The ID given to each parameter indicating severity of the topic
+Source,The external url that published the event info
+Status,unclear
+Target_id,ID given to each target as it is logged (parameter)
+Value,unclear
+Value_date,The date the value appears
+Weight,unclear

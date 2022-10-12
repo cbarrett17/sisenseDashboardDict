@@ -1,0 +1,30 @@
+Value,Definition
+Additional_info,Extra info added to the GSRM alert
+Alert_date,The date that the alert event occurred
+Alert_url,The internal SW url that contains the alert info
+Author_id,The ID of the author creating the alert
+Content,The text body of the alert
+Date_created,The date that the alert event is created
+Date_published,The date that the alert event is published
+Date_updated,The date that the alert event is updated
+Event_name,Topic/descriptor assigned to the alert
+Id,The ID of the alert on creation
+Image,File names for any accompanying images that are embedded with the alerts
+IsConsolidated,An designation of 0/1 if the alert has been resolved
+IsPartOfConsolidated,An designation of 0/1 if the alert has been resolved and included in the database of similarly resolved events
+Pdf_file,File names for any accompanying PDFs that are embedded with the alerts
+Period_quarter,The quarter of the year in which the alerts occurs
+Period_year,The year in which the event that the alert refers to occur(s/red)
+Perspective,Additional information about the context of the alert that aids understanding of the circumstances
+Published_by_id,Displays the ID that published the alert if given one
+Quality,unclear
+Reviewer_id,Displays the ID that reviewed the alert if given one
+Severity,The designation given to the alert for the severity of the event
+Source,The external url that published the event info
+Source_title,The title of the event given by the source
+Status,unclear
+Takeaways,Conclusions drawn from the alert for quick review by the reader
+Title,Title of the article the alert is generated from
+TurnOver,unclear
+TurnOverList,unclear
+Type_of_event_id,An ID given to each event

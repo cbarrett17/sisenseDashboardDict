@@ -1,0 +1,4 @@
+Value,Definition
+Domain_name,The sector that each report and/or alert is filed into
+Id,The ID of the domain on creation
+Target_type_id,ID assigned to a target (location/company) on a 1-5 scale

@@ -1,0 +1,18 @@
+Value,Definition
+Author_id,The ID of the author creating the alert
+Composite_risk,Total of all risk scores summed
+Date_created,Date the alert was created
+Date_published,Date the alert was published
+Date_updated,Date the alert was updated
+Highlights,unclear
+Id,The ID of the account on creation
+Period_quarter,The quarter of the year
+Period_year,The year
+Published_by_id,Displays the ID that published the alert if given one
+Rank,The order in which each alert is placed
+Report_type_id,Number assigned to the type of data being reported based on where it originated
+Report_type_name,Where the report originated from
+Security_target_id,unclear
+Status,unclear
+Target_id,ID given to each target as it is logged (accounts)
+Value_date,Whichever time period a value appears in
