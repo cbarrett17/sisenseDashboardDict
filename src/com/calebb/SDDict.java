@@ -6,7 +6,6 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 
 import java.io.*;
-import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -27,7 +26,6 @@ public class SDDict {
         ResourceBundle strings;
         Options options;
         String fileName;
-        File filoPilo;
         String userInput = "";
         String definition;
         HashMap<String, String> dictionary;
@@ -112,11 +110,12 @@ public class SDDict {
         return fileName;
     }
 
-    private static HashMap<String, String> readAndPopulate(String filoPilo) {
+    private static HashMap<String, String> readAndPopulate(String fileName) {
         HashMap<String, String> dict;
-        Path path;
+        String filoPilo;
 
         dict = new HashMap<>();
+        filoPilo = "csvs/" + fileName;
 
         try {
             BufferedReader br;
