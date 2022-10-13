@@ -1,9 +1,6 @@
 package com.calebb;
 
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.Options;
+import org.apache.commons.cli.*;
 
 import java.io.*;
 import java.util.HashMap;
@@ -18,14 +15,14 @@ public class SDDict {
     private static final int FILE_NOT_FOUND = 2;
 
     private static final String ALL_VALUES = "valuePairs";
-    private static final String ACCOUNTS = "Domain_names";
-    private static final String CATEGORIES = "valuePairs";
-    private static final String DOMAIN = "valuePairs";
-    private static final String ATARGETS = "valuePairs";
-    private static final String ALERT = "valuePairs";
-    private static final String PARAM = "valuePairs";
-    private static final String SECURITY = "valuePairs";
-    private static final String TARGETS = "valuePairs";
+    private static final String ACCOUNTS = "Accounts_compositescorecalculation";
+    private static final String CATEGORIES = "Gsrm_alert_categories";
+    private static final String DOMAIN = "Domain_names";
+    private static final String ATARGETS = "Gsrm_alert_targets";
+    private static final String ALERT = "Gsrm_alert";
+    private static final String PARAM = "Gsrm_paramvalue";
+    private static final String SECURITY = "Security_table";
+    private static final String TARGETS = "Targets";
 
     // main method of the program
     public static void main(String[] args) {
