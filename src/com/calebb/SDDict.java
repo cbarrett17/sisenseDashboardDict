@@ -133,25 +133,25 @@ public class SDDict {
                 else if (cmd.hasOption("b")) {
                     fileName = ACCOUNTS + ".csv";
                 }
-                else if (cmd.hasOption("b")) {
+                else if (cmd.hasOption("c")) {
                     fileName = CATEGORIES + ".csv";
                 }
-                else if (cmd.hasOption("b")) {
+                else if (cmd.hasOption("d")) {
                     fileName = DOMAIN + ".csv";
                 }
-                else if (cmd.hasOption("b")) {
+                else if (cmd.hasOption("e")) {
                     fileName = ATARGETS + ".csv";
                 }
-                else if (cmd.hasOption("b")) {
+                else if (cmd.hasOption("f")) {
                     fileName = ALERT + ".csv";
                 }
-                else if (cmd.hasOption("b")) {
+                else if (cmd.hasOption("g")) {
                     fileName = PARAM + ".csv";
                 }
-                else if (cmd.hasOption("b")) {
+                else if (cmd.hasOption("i")) {
                     fileName = SECURITY + ".csv";
                 }
-                else if (cmd.hasOption("b")) {
+                else if (cmd.hasOption("j")) {
                     fileName = TARGETS + ".csv";
                 }
                 else {
