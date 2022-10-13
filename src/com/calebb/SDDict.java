@@ -18,6 +18,14 @@ public class SDDict {
     private static final int FILE_NOT_FOUND = 2;
 
     private static final String ALL_VALUES = "valuePairs";
+    private static final String ACCOUNTS = "Domain_names";
+    private static final String CATEGORIES = "valuePairs";
+    private static final String DOMAIN = "valuePairs";
+    private static final String ATARGETS = "valuePairs";
+    private static final String ALERT = "valuePairs";
+    private static final String PARAM = "valuePairs";
+    private static final String SECURITY = "valuePairs";
+    private static final String TARGETS = "valuePairs";
 
     // main method of the program
     public static void main(String[] args) {
@@ -124,6 +132,30 @@ public class SDDict {
                 // Any program run that doesn't include a help command must contain a file name
                 if (cmd.hasOption("a")) {
                     fileName = ALL_VALUES + ".csv";
+                }
+                else if (cmd.hasOption("b")) {
+                    fileName = ACCOUNTS + ".csv";
+                }
+                else if (cmd.hasOption("b")) {
+                    fileName = CATEGORIES + ".csv";
+                }
+                else if (cmd.hasOption("b")) {
+                    fileName = DOMAIN + ".csv";
+                }
+                else if (cmd.hasOption("b")) {
+                    fileName = ATARGETS + ".csv";
+                }
+                else if (cmd.hasOption("b")) {
+                    fileName = ALERT + ".csv";
+                }
+                else if (cmd.hasOption("b")) {
+                    fileName = PARAM + ".csv";
+                }
+                else if (cmd.hasOption("b")) {
+                    fileName = SECURITY + ".csv";
+                }
+                else if (cmd.hasOption("b")) {
+                    fileName = TARGETS + ".csv";
                 }
                 else {
                     System.err.println("\nERROR: INVALID COMMAND GIVEN\nSYSTEM EXIT 1\n");
