@@ -101,26 +101,35 @@ public class SDDict {
         // Create a parser
         parser = new DefaultParser();
 
-        // Parse options passed in as CLA
+        // Parse options passed in as CLAs
         try {
             CommandLine cmd = parser.parse(options, args);
 
             // Check if help option is present or not
             if (cmd.hasOption("h")) {
                 System.out.printf(
-                    helpMsg + "\n-a, --all:  %s\n-b, --accounts:  %s" +
-                        "\n-c, --categories:  %s\n-d, --domain:  %s" +
-                        "\n-e, --atargets:  %s\n-f, --alert:  %s" +
-                        "\n-g, --param:  %s\n-i, --security:  %s" +
-                        "\n-j, --targets:  %s",
+                    helpMsg + "%n%-20s %s%n%-20s %s" +
+                        "%n%-20s %s%n%-20s %s" +
+                        "%n%-20s %s%n%-20s %s" +
+                        "%n%-20s %s%n%-20s %s" +
+                        "%n%-20s %s",
+                    strings.getString("allMsg"),
                     options.getOption("a").getDescription(),
+                    strings.getString("accMsg"),
                     options.getOption("b").getDescription(),
+                    strings.getString("catMsg"),
                     options.getOption("c").getDescription(),
+                    strings.getString("domMsg"),
                     options.getOption("d").getDescription(),
+                    strings.getString("ataMsg"),
                     options.getOption("e").getDescription(),
+                    strings.getString("aleMsg"),
                     options.getOption("f").getDescription(),
+                    strings.getString("parMsg"),
                     options.getOption("g").getDescription(),
+                    strings.getString("secMsg"),
                     options.getOption("i").getDescription(),
+                    strings.getString("tarMsg"),
                     options.getOption("j").getDescription()
                 );
                 System.exit(HELP_OPTION);
