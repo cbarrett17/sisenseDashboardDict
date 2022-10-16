@@ -104,6 +104,7 @@ public class SDDict {
         // Parse options passed in as CLAs
         try {
             CommandLine cmd = parser.parse(options, args);
+            Option[] exp;
 
             // Check if help option is present or not
             if (cmd.hasOption("h")) {
@@ -136,41 +137,23 @@ public class SDDict {
             }
             else {
                 // Any program run that doesn't include a help command must contain a file name
-                if (cmd.hasOption("a")) {
-                    fileName = ALL_VALUES + ".csv";
+                exp = cmd.getOptions();
+                switch (exp[0].getValue()) {
+                    case "a" -> fileName = ALL_VALUES;
+                    case "b" -> fileName = ACCOUNTS;
+                    case "c" -> fileName = CATEGORIES;
+                    case "d" -> fileName = DOMAIN;
+                    case "e" -> fileName = ATARGETS;
+                    case "f" -> fileName = ALERT;
+                    case "g" -> fileName = PARAM;
+                    case "i" -> fileName = SECURITY;
+                    case "j" -> fileName = TARGETS;
                 }
-                else if (cmd.hasOption("b")) {
-                    fileName = ACCOUNTS + ".csv";
-                }
-                else if (cmd.hasOption("c")) {
-                    fileName = CATEGORIES + ".csv";
-                }
-                else if (cmd.hasOption("d")) {
-                    fileName = DOMAIN + ".csv";
-                }
-                else if (cmd.hasOption("e")) {
-                    fileName = ATARGETS + ".csv";
-                }
-                else if (cmd.hasOption("f")) {
-                    fileName = ALERT + ".csv";
-                }
-                else if (cmd.hasOption("g")) {
-                    fileName = PARAM + ".csv";
-                }
-                else if (cmd.hasOption("i")) {
-                    fileName = SECURITY + ".csv";
-                }
-                else if (cmd.hasOption("j")) {
-                    fileName = TARGETS + ".csv";
-                }
-                else {
-                    System.err.println("\nERROR: INVALID COMMAND GIVEN\nSYSTEM EXIT 1\n");
-                    System.exit(INVALID_INPUT);
-                }
+                fileName = fileName + ".csv";
             }
         }
         catch (org.apache.commons.cli.ParseException p) {
-            System.err.println("\nERROR: INVALID COMMAND GIVEN\nSYSTEM EXIT 1\n");
+            System.err.println("nERROR: INVALID COMMAND GIVEN%nSYSTEM EXIT 1%n");
             System.exit(INVALID_INPUT);
         }
 
@@ -191,7 +174,7 @@ public class SDDict {
             dict = populateDict(br);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.err.println("\nERROR: FILE NOT FOUND\nSYSTEM EXIT 2\n");
+            System.err.println("%nERROR: FILE NOT FOUND%nSYSTEM EXIT %n");
             System.exit(FILE_NOT_FOUND);
         }
         return dict;
@@ -225,7 +208,7 @@ public class SDDict {
 
         sc = new Scanner(System.in);
 
-        System.out.println("Value: ");
+        System.out.print("Value: ");
         input = sc.nextLine();
 
         return input;
