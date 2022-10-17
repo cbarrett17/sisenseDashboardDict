@@ -8,7 +8,12 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-
+/**
+ * This program accepts command line arguments and opens a dictionary according to which argument is given by the user.
+ * The corresponding dictionary can be queried for the definition for whichever value the user enters.
+ *
+ * @author calebb@supplywisdom.com
+ */
 public class SDDict {
     private static final int HELP_OPTION = 0;
     private static final int INVALID_INPUT = 1;
@@ -24,9 +29,12 @@ public class SDDict {
     private static final String SECURITY = "Security_table";
     private static final String TARGETS = "Targets";
 
-    // main method of the program
+
+    /**
+     * The main method of the class that runs the methods provided below.
+     * @param args The arguments provided by the user
+     */
     public static void main(String[] args) {
-        // create new options
         Locale locale;
         ResourceBundle strings;
         Options options;
@@ -60,6 +68,11 @@ public class SDDict {
         System.out.println(definition);
     }
 
+    /**
+     * Creates options that will inform which CSV file will populate the dictionary.
+     * @param strings The list of arguments available and descriptions for each
+     * @return The set of options
+     */
     private static Options createOptions(ResourceBundle strings) {
         Options options;
 
@@ -90,6 +103,13 @@ public class SDDict {
         return options;
     }
 
+    /**
+     * Allows the parsing of the options provided by the user based on the previously constructed option set.
+     * @param options The set of options
+     * @param args The arguments provided by the user
+     * @param strings The arguments and descriptions for each
+     * @return The name of the CSV file that will populate the dictionary
+     */
     private static String parseCMDOptions(Options options, String[] args, ResourceBundle strings) {
         String helpMsg;
         String fileName = "";
@@ -160,6 +180,11 @@ public class SDDict {
         return fileName;
     }
 
+    /**
+     * Reads in the file and popualates the HashMap dictionary with each key-value pair.
+     * @param fileName The file to be read in and used
+     * @return The populated dictionary
+     */
     private static HashMap<String, String> readAndPopulate(String fileName) {
         HashMap<String, String> dict;
         String filoPilo;
@@ -180,6 +205,12 @@ public class SDDict {
         return dict;
     }
 
+    /**
+     * Takes a buffered reader and converts the CSV to key-value pairs. The resulting pairs are placed in the HashMap
+     * and can be accessed by the user.
+     * @param br The buffered reader for the CSV
+     * @return The populated dictionary
+     */
     private static HashMap<String, String> populateDict(BufferedReader br) {
         HashMap<String, String> dict;
         String[] pairs;
