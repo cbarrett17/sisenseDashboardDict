@@ -112,11 +112,13 @@ public class SDDict {
      */
     private static String parseCMDOptions(Options options, String[] args, ResourceBundle strings) {
         String helpMsg;
+        String allDisc;
         String fileName = "";
         CommandLineParser parser;
 
         // get help message
         helpMsg = strings.getString("helpMsg");
+        allDisc = strings.getString("allDisc");
 
         // Create a parser
         parser = new DefaultParser();
@@ -129,13 +131,14 @@ public class SDDict {
             // Check if help option is present or not
             if (cmd.hasOption("h")) {
                 System.out.printf(
-                    helpMsg + "%n%-20s %s%n%-20s %s" +
+                    helpMsg + "%n%-20s %s%n%s%n%-20s %s" +
                         "%n%-20s %s%n%-20s %s" +
                         "%n%-20s %s%n%-20s %s" +
                         "%n%-20s %s%n%-20s %s" +
                         "%n%-20s %s",
                     strings.getString("allMsg"),
                     options.getOption("a").getDescription(),
+                    allDisc,
                     strings.getString("accMsg"),
                     options.getOption("b").getDescription(),
                     strings.getString("catMsg"),
@@ -181,7 +184,7 @@ public class SDDict {
     }
 
     /**
-     * Reads in the file and popualates the HashMap dictionary with each key-value pair.
+     * Reads in the file and populates the HashMap dictionary with each key-value pair.
      * @param fileName The file to be read in and used
      * @return The populated dictionary
      */
